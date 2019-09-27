@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <title>Andrew Hum</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        body, html { height: 100%; margin : 0px; }
+
+        .bgimg {
+            background-color : black;
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+            position: relative;
+        }
+
+        .welcome {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: "Courier New", Courier, monospace;
+            color: rgb(0, 255, 0);
+        }
+
+        .continue {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: "Courier New", Courier, monospace;
+            color: rgb(0, 255, 0);
+        }
+    </style>
+    <body>
+        <div class="bgimg">
+            <div class = "welcome">
+                <p id="type"></p>
+            </div>
+
+            <input type="hidden" onkeypress="go()">
+
+        </div>
+
+        <script>
+            var i = 0; 
+            var txt = "Hi, I am Andrew Hum. Press any key to continue";
+            var speed = 100;
+
+            function typing() {
+                if (i < txt.length) {
+                    document.getElementById("type").innerHTML += txt.charAt(i);
+                    if (txt.charAt(i) == "."){
+                        document.getElementById("type").innerHTML += "<br>";
+                    }
+                    i++;
+                    setTimeout(typing, speed);
+                }
+            }
+            typing();
+
+            function go(){
+                window.location.href = "soon.html";
+            }
+        </script>
+    </body>
+</html> 
