@@ -8,53 +8,45 @@
     </head>
     <style>
         @keyframes opac{from{opacity:0.3} to{opacity:1}}
-        @keyframes animatetop{from{top:-300px;opacity:0} to{top:50%;opacity:1}}
-        body, html { height: 100%; margin : 0px; }
+        @keyframes animatetop{from{top:-100%;opacity:0} to{top:0%;opacity:1}}
+        body, html { height: 100%; min-height: 100%; margin : 0px; }
+
         .animate-opacity { animation:opac 0.8s}
         .animate-top{position:relative;animation:animatetop 1s}
+
         .bgimg {
             background-image : url('./images/background.jpg');
-            min-height: 100%;
+            max-height: 100%;
             background-position: center;
             background-size: cover;
-            font-family: "Raleway", sans-serif;
-            color: white;
             position: relative;
         }
 
-        .bottomleft {
-            position: absolute;
-            bottom: 0;
-            left: 16px;
-        }
-
-        .middle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .center {
+            padding: 30% 20% 20% 20%;
+            top: 40%;
+            left: 20%;
+            height: 100%;
             text-align: center;
             font-family: "Raleway", sans-serif;
             font-weight: bold;
             font-size: 52px;
+            color: white;
         }
 
-        .line {
-            position: absolute;
-            top: 54%;
-            left: 35%
+        .bottomleft {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            font-family: "Raleway", sans-serif;
+            font-size: 10px;
+            color: white;
+
         }
 
         a {
         color:inherit;
         text-decoration: none;
-        }
-
-        .buttonpos {
-            position: absolute;
-            top: 54%;
-            left: 46%;
-            text-align: center;
         }
 
         .button {
@@ -64,7 +56,7 @@
             font-size: 18px;
             font-weight: bold;
             height: 10%;
-            width: 100%;
+            width: 30%;
             border-radius: 20px;
             line-height: 250%;
             margin: 25px 25px;
@@ -85,16 +77,16 @@
     </style>
     <body>
         <div class ="bgimg animate-opacity">
-            <div class="bottomleft">
-                <p>Andrew Hum</p>
-            </div>
-            <div class ="middle animate-top">
-                COMING SOMETIME
-            </div>
-            <hr class="line" style="margin:auto;width:30%">
-            <div class= buttonpos>
+            <div class="center">
+                <div class ="animate-top"> COMING SOMETIME </div>
+                <hr style="margin:auto;width:50%">
                 <button class="button"><a href="intro.html">SEE BETA</a></button>
             </div>
+            <!--
+            <div class="bottomleft">
+                Andrew Hum
+            </div>
+        -->
         </div>
     </body>
 </html>
