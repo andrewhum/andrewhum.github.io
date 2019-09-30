@@ -32,6 +32,7 @@
         <div class="bgimg">
             <div class = "center">
                 <p id="type"></p>
+                <p id="keydown"></p>
             </div>
             <input type="hidden" onkeypress="go()">
         </div>
@@ -53,8 +54,10 @@
             }
             typing();
 
-            function go(){
-                window.location.href = "soon.html";
+            document.addEventListener('keydown', go);
+
+            function go(e){
+                window.location.href = "home.html";
             }
         </script>
     </body>
