@@ -6,46 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
-        body, html { height: 100%; margin : 0px; }
+        body, html { height: 100%; margin : 0; }
 
         .bgimg {
-            background-color : black;
-            min-height: 100%;
+            background-color: black;
+            height: 100%;
             background-position: center;
             background-size: cover;
-            font-family: "Courier New", Courier, monospace;
-            color: white;
             position: relative;
         }
 
-        .welcome {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .center {
+            box-sizing: border-box;
+            position: relative;
+            padding: 20% 20% 25% 20%;
+            height: 100%;
             text-align: center;
             font-family: "Courier New", Courier, monospace;
-            color: rgb(0, 255, 0);
+            font-size: 100%;
+            color: white;
         }
 
-        .continue {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-family: "Courier New", Courier, monospace;
-            color: rgb(0, 255, 0);
-        }
     </style>
     <body>
         <div class="bgimg">
-            <div class = "welcome">
+            <div class = "center">
                 <p id="type"></p>
             </div>
-
             <input type="hidden" onkeypress="go()">
-
         </div>
 
         <script>

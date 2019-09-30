@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Coming Soon...</title>
+        <title>Coming Sometime...</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -9,37 +9,46 @@
     <style>
         @keyframes opac{from{opacity:0.3} to{opacity:1}}
         @keyframes animatetop{from{top:-100%;opacity:0} to{top:0%;opacity:1}}
-        body, html { height: 100%; min-height: 100%; margin : 0px; }
+        body, html { height: 100%; ; margin : 0px; }
 
         .animate-opacity { animation:opac 0.8s}
         .animate-top{position:relative;animation:animatetop 1s}
 
         .bgimg {
             background-image : url('./images/background.jpg');
-            max-height: 100%;
+            height: 100%;
             background-position: center;
             background-size: cover;
             position: relative;
         }
 
         .center {
-            padding: 30% 20% 20% 20%;
-            top: 40%;
-            left: 20%;
+            box-sizing: border-box;
+            padding: 20% 20% 20% 20%;
             height: 100%;
             text-align: center;
             font-family: "Raleway", sans-serif;
             font-weight: bold;
-            font-size: 52px;
+            font-size: 4vw;
             color: white;
+            position: relative;
+        }
+
+        .vertical-center {
+            box-sizing: border-box;
+            position: relative;
+            margin: 0;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
 
         .bottomleft {
-            position: relative;
-            top: 0%;
+            position: absolute;
+            top: 95%;
             left: 0%;
             font-family: "Raleway", sans-serif;
-            font-size: 10px;
+            font-size: 2vw;
             color: white;
 
         }
@@ -53,13 +62,13 @@
             background: rgb(201, 111, 9);
             color: #fff;
             font-family: "Raleway", sans-serif;
-            font-size: 18px;
+            font-size: 30%;
             font-weight: bold;
             height: 10%;
-            width: 30%;
+            width: 25%;
             border-radius: 20px;
             line-height: 250%;
-            margin: 25px 25px;
+            margin: 2% 2%;
             text-align: center;
             border: 0;
             transition: all 0.3s ease 0s;
@@ -78,15 +87,15 @@
     <body>
         <div class ="bgimg animate-opacity">
             <div class="center">
-                <div class ="animate-top"> COMING SOMETIME </div>
-                <hr style="margin:auto;width:50%">
-                <button class="button"><a href="intro.html">SEE BETA</a></button>
+                <div class = "vertical-center">
+                    <div class ="animate-top"> COMING SOMETIME </div>
+                    <hr style="margin:auto;width:50%">
+                    <button class="button"><a href="intro.html">SEE BETA</a></button>
+                </div>
             </div>
-            <!--
             <div class="bottomleft">
                 Andrew Hum
             </div>
-        -->
         </div>
     </body>
 </html>
