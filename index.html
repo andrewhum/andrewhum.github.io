@@ -3,20 +3,13 @@
         <title>Andrew Hum</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <style>
         body, html { height: 100%; margin: 0; color: #777; line-height: 1.8; }
         body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
 
         .animate-opacity{animation:opac 1.3s}@keyframes opac{from{opacity:0} to{opacity:0.8}}
-
-        .top {
-            position: fixed;
-            width: 100%;
-            z-index: 1;
-            top: 0;
-        }
 
         ul {
             list-style-type: none;
@@ -98,25 +91,89 @@
             }
         }
 
+        @media screen and (min-width: 601px){
+            .hide-large {
+                display: none;
+            }   
+        }
+
         @media screen and (max-width: 600px){
             .hide-small {
                 display: none;
+            }
+
+            .topnav {
+                overflow: hidden;
+                position: relative;
+            }
+
+            .topnav #myLinks {
+                display: none;
+            }
+
+            .topnav a {
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                display: block;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+
+            .topnav a.icon {
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav a:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .active {
+                background-color: rgba(0, 0, 0, 0.2);
             }
         }
 
     </style>
     <body>
         <div class="bgimg1" id = "home">
-            <ul>
-                <li><a class="active" href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#portoflio">PORTFOLIO</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
+            <div class="hide-small">
+                <ul>
+                    <li><a class="active" href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portoflio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="topnav hide-large">
+                <a href="#home" class="active">HOME</a>
+                <div id="myLinks">
+                    <a href="#about">ABOUT</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
             <img src="./images/logo.png" alt="logo" style="width:40%">
             <div class ="display-middle" style="white-space:nowrap">
                 <span class="center title animate-opacity">A N D R E W <span class="hide-small">&nbsp H U M</span></span>
             </div>
         </div>
+
+        <script>
+            function hamburger() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
     </body>
 </html>
