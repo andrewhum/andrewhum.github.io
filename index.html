@@ -9,7 +9,7 @@
         body, html { height: 100%; margin: 0; color: #777; line-height: 1.8; }
         body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
 
-        .animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:0.7}}
+        .animate-opacity{animation:opac 1.3s}@keyframes opac{from{opacity:0} to{opacity:0.8}}
 
         .bgimg1 {
             background-image : url('./images/indexbg.jpg');
@@ -36,9 +36,9 @@
         .title {
             letter-spacing: 4px;
             color: white;
-            font-size: 50px; 
+            font-size: 50px;
             font-weight: bold;
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         img {
@@ -47,18 +47,24 @@
             margin-right: auto;
             max-width: 500px;
             min-width: 300px;
+            opacity: 0.8;
+            animation: opac 0.8s;
         }
-        
-        .logo {
 
+        @media only screen and (max-device-width: 1600px) {
+            .bgimg1 {
+                background-attachment: scroll;
+                min-height: 400px;
+            }
+            .title{
+                font-size: 20px;
+            }
         }
 
     </style>
     <body>
         <div class="bgimg1" id = "home">
-            <div class="logo">
-                <img src="./images/logo.png" alt="logo" style="width:40%">
-            </div>
+            <img src="./images/logo.png" alt="logo" style="width:40%">
             <div class ="display-middle" style="white-space:nowrap">
                 <span class="center title animate-opacity">A N D R E W &nbsp H U M</span>
             </div>
