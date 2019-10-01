@@ -21,23 +21,22 @@
             position: relative;
         }
 
+        .display-middle {
+            position: absolute;
+            left: 50%;
+            transform:translate(-50%, 0);
+        }
+
         .center {
             display: inline-block;
             width: auto;
             text-align: center;
         }
 
-        .display-middle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform:translate(-50%,-50%);
-        }
-
         .title {
             letter-spacing: 4px;
             color: white;
-            font-size: 30px; 
+            font-size: 50px; 
             font-weight: bold;
             opacity: 0.7;
         }
@@ -46,6 +45,8 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            max-width: 500px;
+            min-width: 300px;
         }
         
         .logo {
@@ -56,10 +57,10 @@
     <body>
         <div class="bgimg1" id = "home">
             <div class="logo">
-                <img src="./images/logo.png" alt="logo" style="width:30%">
+                <img src="./images/logo.png" alt="logo" style="width:40%">
             </div>
             <div class ="display-middle" style="white-space:nowrap">
-                <span class="center title animate-opacity">ANDREW HUM</span>
+                <span class="center title animate-opacity">A N D R E W &nbsp H U M</span>
             </div>
         </div>
     </body>
