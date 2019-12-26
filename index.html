@@ -1,199 +1,47 @@
-<html>
-    <head>
-        <title>Andrew Hum</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <style>
-        body, html { height: 100%; margin: 0; color: #777; line-height: 1.8; }
-        body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .animate-opacity{animation:opac 1.3s}@keyframes opac{from{opacity:0} to{opacity:0.8}}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
+    <title>Andrew Hum</title>
+  </head>
+  <style>
+    body { background-color: white; color: white; font-family: "Raleway"; height: 100%; margin: 0;}
 
-        li {
-            float: left;
-        }
+    .jumbotron{
+      background-color:rgb(51, 51, 51) !important;
+    }
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: auto;
+      
+    }
+  </style>
+  <body>
+    <div class="fullscreen">
+        <div class="container-flex" style="height:15%; background-color: rgb(51, 51, 51)"></div>
+      <div class="container d-flex justify-content-center" style="height:70%; background-color: transparent">
+          <div class="jumbotron my-auto">
+              <h1 class="ml12" style="font-size:4vmin"> &nbsp A &nbsp N &nbsp D &nbsp R &nbsp E &nbsp W &nbsp&nbsp&nbsp H &nbsp U &nbsp M &nbsp</h1>
+          </div>
+      </div>
+      <div class="container-flex" style="height:15%; background-color: rgb(51, 51, 51)"></div>
+    </div>>
 
-        li a {
-            display: block;
-            color: white;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover:not(.active) {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        .active {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-
-        .bgimg1 {
-            background-image : url('./images/indexbg.jpg');
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
-        }
-
-        .display-middle {
-            position: absolute;
-            left: 50%;
-            transform:translate(-50%, 0);
-        }
-
-        .center {
-            display: block;
-            width: auto;
-            text-align: center;
-        }
-
-        .title {
-            letter-spacing: 4px;
-            color: white;
-            font-size: 50px;
-            font-weight: bold;
-            opacity: 0.8;
-        }
-
-        img {
-            display: block;
-            padding-top: 5%;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 500px;
-            min-width: 300px;
-            opacity: 0.8;
-            animation: opac 0.8s;
-        }
-
-        .about {
-                padding: 10% 10% 0% 10%;
-                max-width:980px;
-        }
-
-        @media only screen and (max-device-width: 1600px) {
-            .bgimg1 {
-                background-attachment: scroll;
-                height: 100%;
-            }
-        }
-
-        @media screen and (min-width: 601px){
-            .hide-large {
-                display: none;
-            }   
-        }
-
-        @media screen and (max-width: 600px){
-            .hide-small {
-                display: none;
-            }
-
-            .topnav {
-                overflow: hidden;
-                position: relative;
-            }
-
-            .topnav #myLinks {
-                display: none;
-            }
-
-            .topnav a {
-                color: white;
-                padding: 14px 15px;
-                text-decoration: none;
-                font-size: 17px;
-                display: block;
-                font-weight: bold;
-                letter-spacing: 2px;
-                text-align: center;
-            }
-
-            .topnav a.icon {
-                display: block;
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-
-            .topnav a:hover {
-                background-color: rgba(0, 0, 0, 0.3);
-            }
-
-            .active {
-                background-color: rgba(0, 0, 0, 0.2);
-            }
-        }
-
-    </style>
-    <body>
-        <div class="bgimg1" id = "home">
-            <div class="hide-small">
-                <ul>
-                    <li><a class="active" href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#portoflio">PORTFOLIO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="topnav hide-large">
-                <a href="#home" class="active">HOME</a>
-                <div id="myLinks">
-                    <a href="#about">ABOUT</a>
-                    <a href="#portfolio">PORTFOLIO</a>
-                    <a href="#contact">CONTACT</a>
-                </div>
-                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-            <img src="./images/logo.png" alt="logo" style="width:40%">
-            <div class ="display-middle" style="white-space:nowrap">
-                <span class="center title animate-opacity">A N D R E W <span class="hide-small">&nbsp H U M</span></span>
-            </div>
-        </div>
-
-        <div class="about" id="about">
-            <h3> About Me</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
-            est laborum. 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
-            est laborum. </p>
-        </div>
-
-        <script>
-            function hamburger() {
-                var x = document.getElementById("myLinks");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
-    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
