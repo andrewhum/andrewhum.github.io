@@ -33,33 +33,22 @@
         <div class="bgimg">
             <div class = "center">
                 <p id="type"></p>
-                <p id="keydown"></p>
             </div>
-            <input type="hidden" onkeypress="go()">
         </div>
 
         <script>
             var i = 0; 
-            var txt = "Hello there. Press any key to continue";
-            var speed = 100;
+            var txt = "SOFTWARE ENGINEER";
+            var speed = 150;
 
             function typing() {
                 if (i < txt.length) {
                     document.getElementById("type").innerHTML += txt.charAt(i);
-                    if (txt.charAt(i) == "."){
-                        document.getElementById("type").innerHTML += "<br>";
-                    }
                     i++;
                     setTimeout(typing, speed);
                 }
             }
             typing();
-
-            document.addEventListener('keydown', go);
-
-            function go(e){
-                window.location.href = "home.html";
-            }
         </script>
     </body>
 </html> 
